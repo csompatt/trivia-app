@@ -1,0 +1,114 @@
+/* RESET BUTTON */
+
+button {
+  background-color: transparent;
+  border-width: 0;
+  font-family: inherit;
+  font-size: inherit;
+  font-style: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+  padding: 0;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Space Mono', monospace;
+}
+
+html {
+  width: 100%;
+  height: 100%;
+  font-size: 16px;
+}
+
+body {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  background-color: #c5e4e7;
+}
+
+header,
+main {
+  width: 80%;
+}
+
+header {
+  padding-top: 4rem;
+}
+
+.home-button {
+  position: absolute;
+  left: 1rem;
+  top: 1rem;
+  font-size: 1.2rem;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+}
+
+.hide {
+  display: none;
+}
+
+/* .welcome-page {
+  display: none;
+} */
+
+.game {
+  display: none !important;
+}
+
+.result {
+  display: none;
+}
+
+.game-infos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+}
+
+.question-counter {
+  font-size: 1rem;
+}
+
+.time {
+  font-size: 3.5rem;
+}
+
+button {
+  cursor: pointer;
+  color: #000000;
+}
+
+button:not(.home-button) {
+  height: 4rem;
+  margin-bottom: 1rem;
+  border: 4px solid #685e2d;
+  border-radius: 1.5rem;
+  box-shadow: 1px 1px 2px 1px #000000;
+  background-color: #f4cc6a;
+}
+
+.first-button {
+  margin-top: 3rem;
+}
+
+button:active {
+  background-color: #e3c371;
+  box-shadow: none;
+}
+
+button:last-child {
+  padding: 0 2rem 0 2rem;
+}
