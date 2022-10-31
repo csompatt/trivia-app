@@ -24,11 +24,17 @@ let timeCounterValue = 15;
 
 questionNumberBtns.forEach((element) => {
   element.addEventListener('click', function (e) {
+    // ** Disable click again **
+
+    questionNumberBtns.forEach((element) => {
+      element.classList.add('disable-click');
+    });
+
     numberOfQuestions = e.currentTarget.value;
     currentAnswer.textContent = currentQuestionNumber + 1;
 
     // ** Start time counter **
-
+    timeCounterValue = 15;
     startCounter();
 
     // ** Fetch quiz api with the selected number of questions **
@@ -139,6 +145,10 @@ function showWelcomePage() {
     elem.classList.add('hide');
   });
   resultPage.classList.add('hide');
+
+  questionNumberBtns.forEach((element) => {
+    element.classList.remove('disable-click');
+  });
 }
 
 // ***** Game visibility *****
