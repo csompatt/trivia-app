@@ -19,34 +19,35 @@
   </head>
   <body>
     <header>
-      <button class="game-infos home-button"><i class="fa-sharp fa-solid fa-house"></i></button>
+      <button class="game home-button hide"><i class="fa-sharp fa-solid fa-house"></i></button>
       <div class="welcome-page">
         <h1 class="main-title">Welcome to the Quiz Game</h1>
         <p class="sub-title">Choose how many questions do you want:</p>
       </div>
-      <div class="game game-infos">
-        <h2 class="question-counter"><span class="number-of-question">20</span>/<span class="correct-answers">1</span></h2>
-        <h2 class="time">20</h2>
+      <div class="game game-infos hide">
+        <h2 class="question-counter"><span class="number-of-questions"></span>/<span class="current-answer"></span></h2>
+        <h2 class="time">15</h2>
       </div>
     </header>
     <main>
       <div class="welcome-page buttons">
-        <button class="first-button">5 Question</button>
-        <button>10 Question</button>
-        <button>15 Question</button>
-        <button>20 Question</button>
+        <button class="first-button question-number" value="5">5 Question</button>
+        <button class="question-number" value="10">10 Question</button>
+        <button class="question-number" value="15">15 Question</button>
+        <button class="question-number" value="20">20 Question</button>
       </div>
-      <div class="game buttons">
+      <div class="game buttons hide">
         <h3 class="question">What is the answer?</h3>
-        <button class="first-button">Answer 1</button>
-        <button>Answer 2</button>
-        <button>Answer 3</button>
-        <button>Answer 4</button>
+        <button class="first-button answer-button">Answer 1</button>
+        <button class="answer-button">Answer 2</button>
+        <button class="answer-button">Answer 3</button>
+        <button class="answer-button">Answer 4</button>
       </div>
       <div class="result hide">
         <h3>Game Over</h3>
-        <h3>Your points: <span class="number-of-question">20</span> / <span class="correct-answers">1</span></h3>
-        <button class="first-button">Play Again</button>
+        <h3>Your points: <span class="number-of-questions"></span> / <span class="correct-answers"></span></h3>
+        <button class="first-button play-again">Play Again</button>
+        <img class="winner-img hide" src="./winner.png" alt="Winner picture">
       </div>
     </main>
     <script src="./script.js" async defer></script>

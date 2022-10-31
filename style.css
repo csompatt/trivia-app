@@ -57,19 +57,7 @@ header {
 }
 
 .hide {
-  display: none;
-}
-
-/* .welcome-page {
-  display: none;
-} */
-
-.game {
   display: none !important;
-}
-
-.result {
-  display: none;
 }
 
 .game-infos {
@@ -109,6 +97,28 @@ button:active {
   box-shadow: none;
 }
 
-button:last-child {
+.play-again {
   padding: 0 2rem 0 2rem;
+}
+
+.winner-img {
+  width: 50%;
+  display: block;
+  margin: 3rem auto 0 auto;
+}
+
+.selected-answer {
+  background-color: #e7f5f8 !important;
+}
+
+.correct-answer {
+  background-color: #94ed85 !important;
+}
+
+.incorrect-answer {
+  background-color: #d7412d !important;
+}
+
+.disable-click {
+  pointer-events: none;
 }
