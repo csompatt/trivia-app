@@ -19,11 +19,13 @@ let intervalCounter;
 let answers = [];
 let correctAnswersCounter = 0;
 let timeCounterValue = 15;
+let timeOutId;
 
 // ***** Question number button function *****
 
 questionNumberBtns.forEach((element) => {
   element.addEventListener('click', function (e) {
+    resetGame();
     // ** Disable click again **
 
     questionNumberBtns.forEach((element) => {
@@ -34,6 +36,7 @@ questionNumberBtns.forEach((element) => {
     currentAnswer.textContent = currentQuestionNumber + 1;
 
     // ** Start time counter **
+    /*    clearInterval(); */
     timeCounterValue = 15;
     startCounter();
 
@@ -129,6 +132,7 @@ function resetAnswers() {
 }
 
 function resetGame() {
+  correctAnswer.textContent = '0';
   timeCounterValue = 15;
   resetAnswers();
   currentQuestionNumber = 0;
@@ -177,12 +181,12 @@ function showResult() {
   welcomePage.forEach((elem) => {
     elem.classList.add('hide');
   });
-  resetGame();
 }
 
 // ***** Home button function *****
 
 homeBtn.addEventListener('click', function () {
+  clearTimeout(timeOutId);
   showWelcomePage();
   resetGame();
 });
@@ -246,9 +250,9 @@ answerBtns.forEach((element) => {
 
         // ** Result page **
 
-        setTimeout(function () {
+        timeOutId = setTimeout(function () {
           showResult();
-        }, 2000);
+        }, 1500);
       }
     }, 2000);
   });
